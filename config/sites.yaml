@@ -1,0 +1,37 @@
+# Реестр сайтов холдинга. Агент работает и на любом URL вне списка: python -m dealer_audit run https://example.ru
+# type: new — новые авто бренда; used — авто с пробегом; import — авто под заказ из-за рубежа; group — портал холдинга
+defaults:
+  city: Чебоксары
+  competitors:            # 2–3 местных дилера для сравнения (можно переопределить у сайта)
+    - {name: "ТТС Чебоксары", url: "https://cheboksary.tts.ru/"}
+    - {name: "Chery Центр (АТК Моторс)", url: "https://chery-atkmotors.ru/"}
+    - {name: "Тойота Центр Чебоксары", url: "https://toyota-cheb.tts.ru/"}
+
+sites:
+  alyans-auto:   {name: "ГК Альянс-Авто (портал)", url: "https://alyans-auto.ru/", type: group, brand: "автосалон"}
+  autoimport:    {name: "Альянс-Авто: авто из США", url: "https://autoimport.alyans-auto.ru/", type: import, brand: "авто из сша",
+                  keywords: ["авто из сша чебоксары", "пригнать авто из сша", "купить bmw x5 из сша", "авто под заказ из сша с доставкой", "mercedes gle из сша купить"]}
+  shop:          {name: "Альянс-Авто: каталог в наличии", url: "https://shop.alyans-auto.ru/", type: used, brand: "авто"}
+  haval:         {name: "Haval Альянс-Авто", url: "https://alyans-haval.ru/", type: new, brand: "haval"}
+  geely:         {name: "Geely Альянс-Авто", url: "https://geely-alyans.ru/", type: new, brand: "geely"}
+  belgee:        {name: "Belgee Альянс-АвтоКарс", url: "https://belgee-alyans.ru/", type: new, brand: "belgee"}
+  tenet:         {name: "Tenet Альянс", url: "https://alyans-tenetplus.ru/", type: new, brand: "tenet"}
+  changan:       {name: "Чанган Центр Чебоксары", url: "https://cheboksary-changanauto.ru/", type: new, brand: "changan"}
+  chery:         {name: "Chery Альянс", url: "https://cheby-alyans.ru/", type: new, brand: "chery"}
+  kia:           {name: "Альянс-Моторс (Kia)", url: "https://kia-almotors.ru/", type: new, brand: "kia"}
+  omoda-cheb:    {name: "Omoda Лайф Авто", url: "https://omoda-lifeauto.ru/", type: new, brand: "omoda"}
+  jaecoo-cheb:   {name: "Jaecoo Лайф Авто", url: "https://jaecoo-lifeauto.ru/", type: new, brand: "jaecoo"}
+  solaris-cheb:  {name: "Solaris Альянс", url: "https://solaris-alyans.ru/", type: new, brand: "solaris"}
+  lovol:         {name: "Lovol Восток Авто", url: "https://lovol-alyans.ru/", type: new, brand: "lovol"}
+  knewstar:      {name: "Knewstar Альянс", url: "https://knewstar-alyans.ru/", type: new, brand: "knewstar"}
+  vag:           {name: "Фердинанд Моторс (VAG)", url: "https://vag-alyans.ru/", type: new, brand: "volkswagen"}
+  nissan-cheb:   {name: "Автон (Nissan) Чебоксары", url: "https://nissan-avton.ru/", type: new, brand: "nissan"}
+  lada-dialavto: {name: "Диал-Авто (LADA)", url: "https://dialavto.lada.ru/", type: new, brand: "lada"}
+  lada-avtoregion: {name: "Авторегион (LADA)", url: "https://avtoregion.lada.ru/", type: new, brand: "lada"}
+  # Йошкар-Ола
+  nissan-yo:     {name: "Автон (Nissan) Йошкар-Ола", url: "https://nissan-mariel.ru/", type: new, brand: "nissan", city: Йошкар-Ола}
+  mitsubishi-yo: {name: "Mitsubishi Йошкар-Ола", url: "https://mitsubishi12.ru/", type: new, brand: "mitsubishi", city: Йошкар-Ола}
+  omoda-yo:      {name: "Omoda Альянс Йошкар-Ола", url: "https://omoda-alyans.ru/", type: new, brand: "omoda", city: Йошкар-Ола}
+  jaecoo-yo:     {name: "Jaecoo Альянс Йошкар-Ола", url: "https://jaecoo-alyans.ru/", type: new, brand: "jaecoo", city: Йошкар-Ола}
+  jac-yo:        {name: "JAC Рейн Моторс", url: "https://jac-reynmotors.ru/", type: new, brand: "jac", city: Йошкар-Ола}
+  solaris-yo:    {name: "Solaris Рейн", url: "https://solaris-reyn.ru/", type: new, brand: "solaris", city: Йошкар-Ола}

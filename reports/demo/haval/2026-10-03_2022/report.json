@@ -1,0 +1,938 @@
+{
+ "meta": {
+  "site": {
+   "name": "Haval Альянс-Авто",
+   "url": "https://alyans-haval.ru/",
+   "type": "new",
+   "brand": "haval",
+   "key": "haval",
+   "city": "Чебоксары",
+   "competitors": [
+    {
+     "name": "ТТС Чебоксары",
+     "url": "https://cheboksary.tts.ru/"
+    },
+    {
+     "name": "Chery Центр (АТК Моторс)",
+     "url": "https://chery-atkmotors.ru/"
+    },
+    {
+     "name": "Тойота Центр Чебоксары",
+     "url": "https://toyota-cheb.tts.ru/"
+    }
+   ],
+   "keywords": []
+  },
+  "date": "2026-10-03 20:22",
+  "elapsed_s": 281,
+  "pages_rendered": 25,
+  "urls_discovered": 207,
+  "llm": {
+   "provider": "none",
+   "model": "",
+   "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 0
+   }
+  },
+  "competitors": [
+   "https://cheboksary.tts.ru/",
+   "https://chery-atkmotors.ru/",
+   "https://toyota-cheb.tts.ru/"
+  ],
+  "version": "0.1.0"
+ },
+ "scores": {
+  "conversion": 43,
+  "cards": 79,
+  "technical": 67,
+  "seo": 61,
+  "competitors": 88
+ },
+ "findings": [
+  {
+   "id": "conv.mobile_overlay",
+   "category": "conversion",
+   "title": "На мобильном всплывающие слои закрывают 59% первого экрана",
+   "recommendation": "Сделать cookie-уведомление компактной полосой (1–2 строки) внизу, не показывать одновременно несколько виджетов. Сейчас они перекрывают кнопки и предложение при первом входе.",
+   "impact": 4,
+   "ease": 5,
+   "confidence": 0.7,
+   "evidence": [
+    "shots/home_mobile.jpg",
+    "слой: «Для обеспечения оптимальной работы и улучшения пользовательского опыта на сайте »"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 14.0,
+   "priority": "P0"
+  },
+  {
+   "id": "conv.mobile_no_phone_fold",
+   "category": "conversion",
+   "title": "В мобильной версии телефона нет на первом экране",
+   "recommendation": "Добавить иконку звонка в шапку или закреплённую кнопку «Позвонить». Есть у конкурентов: Chery Центр (АТК Моторс), Тойота Центр Чебоксары.",
+   "impact": 4,
+   "ease": 4,
+   "confidence": 0.85,
+   "evidence": [
+    "shots/home_mobile.jpg",
+    "https://chery-atkmotors.ru/",
+    "https://toyota-cheb.tts.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 13.6,
+   "priority": "P0"
+  },
+  {
+   "id": "conv.no_cta_fold_mobile",
+   "category": "conversion",
+   "title": "На первом экране мобильной версии нет кнопки заявки",
+   "recommendation": "Вынести главную кнопку в первый экран или сделать закреплённую нижнюю панель (Позвонить / Написать / Заявка). Есть у конкурентов: ТТС Чебоксары.",
+   "impact": 4,
+   "ease": 4,
+   "confidence": 0.8,
+   "evidence": [
+    "shots/home_mobile.jpg",
+    "https://cheboksary.tts.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 12.8,
+   "priority": "P0"
+  },
+  {
+   "id": "seo.no_h1",
+   "category": "seo",
+   "title": "Нет H1: 1 стр.",
+   "recommendation": "Один H1 на страницу с главным ключом (модель/категория + город).",
+   "impact": 3,
+   "ease": 5,
+   "confidence": 0.8,
+   "evidence": [
+    "https://alyans-haval.ru/test-online-stock"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 12.0,
+   "priority": "P0"
+  },
+  {
+   "id": "conv.long_forms",
+   "category": "conversion",
+   "title": "Длинные формы заявки: до 7 полей",
+   "recommendation": "Оставить 2 поля (имя, телефон); остальное менеджер уточнит в звонке. Каждое лишнее поле снижает конверсию формы.",
+   "impact": 3,
+   "ease": 4,
+   "confidence": 0.7,
+   "evidence": [
+    "https://alyans-haval.ru/contacts — поля: Город, Дилерский центр, Имя, Фамилия, +7, +7, Email, Комментарий"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 8.4,
+   "priority": "P1"
+  },
+  {
+   "id": "cards.empty_catalog",
+   "category": "cards",
+   "title": "Страница «Авто в наличии» загрузилась без единого автомобиля и цены",
+   "recommendation": "Проверить витрину наличия: за 10+ секунд после загрузки на странице нет ни одного авто с ценой (виджет склада не отработал или пуст). Если витрина грузится внешним виджетом — проверить его доступность и скорость; при пустом складе показывать «авто в пути» и форму предзаказа, а не пустой экран.",
+   "impact": 5,
+   "ease": 3,
+   "confidence": 0.5,
+   "evidence": [
+    "https://alyans-haval.ru/online-stock",
+    "shots/online_stock_desktop.jpg",
+    "shots/online_stock_mobile.jpg"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 7.5,
+   "priority": "P1"
+  },
+  {
+   "id": "seo.sitemap_junk",
+   "category": "seo",
+   "title": "В sitemap тестовые/служебные страницы: 2",
+   "recommendation": "Убрать тестовые страницы из sitemap и закрыть их от индексации (noindex) или удалить.",
+   "impact": 2,
+   "ease": 5,
+   "confidence": 0.75,
+   "evidence": [
+    "https://alyans-haval.ru/test-online-stock/",
+    "https://alyans-haval.ru/online-stock-dev/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 7.5,
+   "priority": "P1"
+  },
+  {
+   "id": "tech.slow_lcp.home",
+   "category": "technical",
+   "title": "Медленная загрузка на мобильном: LCP 4.52 с (норма ≤ 2,5 с)",
+   "recommendation": "Сжать и перевести изображения в WebP/AVIF, задать размеры, ленивая загрузка ниже первого экрана, отложить сторонние виджеты, CDN. Каждая лишняя секунда загрузки снижает конверсию.",
+   "impact": 4,
+   "ease": 3,
+   "confidence": 0.6,
+   "evidence": [
+    "https://alyans-haval.ru/ — LCP 4.52 с, вес 3.1 МБ, запросов 78"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 7.2,
+   "priority": "P1"
+  },
+  {
+   "id": "tech.slow_lcp.catalog",
+   "category": "technical",
+   "title": "Медленная загрузка на мобильном: LCP 13.29 с (норма ≤ 2,5 с)",
+   "recommendation": "Сжать и перевести изображения в WebP/AVIF, задать размеры, ленивая загрузка ниже первого экрана, отложить сторонние виджеты, CDN. Каждая лишняя секунда загрузки снижает конверсию.",
+   "impact": 4,
+   "ease": 3,
+   "confidence": 0.6,
+   "evidence": [
+    "https://alyans-haval.ru/online-stock — LCP 13.29 с, вес 1.23 МБ, запросов 48"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 7.2,
+   "priority": "P1"
+  },
+  {
+   "id": "conv.phone_no_mask",
+   "category": "conversion",
+   "title": "Поле телефона без маски/подсказки формата",
+   "recommendation": "Маска +7 (___) ___-__-__ и type=tel (цифровая клавиатура на мобильном). Меньше ошибок в номерах, меньше потерянных лидов.",
+   "impact": 2,
+   "ease": 5,
+   "confidence": 0.6,
+   "evidence": [
+    "https://alyans-haval.ru/contacts",
+    "https://alyans-haval.ru/purchase/choose-and-offer/test-drive",
+    "https://alyans-haval.ru/models/haval-m6"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.0,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.title_length",
+   "category": "seo",
+   "title": "Title слишком короткий/длинный: 7 стр.",
+   "recommendation": "Оптимально 40–70 символов: модель + ключевое слово + город + выгода.",
+   "impact": 2,
+   "ease": 5,
+   "confidence": 0.6,
+   "evidence": [
+    "https://alyans-haval.ru/ — «Официальный дилер автомобилей HAVAL в Чебоксарах — модельный ряд, комплектации и цены | HA» (112)",
+    "https://alyans-haval.ru/online-stock — «Новые автомобили HAVAL в наличии в Чебоксарах — купить у официального дилера | HAVAL CITY » (103)",
+    "https://alyans-haval.ru/trade-in — «Трейд-ин HAVAL в Чебоксарах — оценить авто и обменять с выгодой | HAVAL CITY «Альянс-Авто»» (90)",
+    "https://alyans-haval.ru/purchase/credit — «Купить HAVAL в кредит в Чебоксарах — программы автокредитования | HAVAL CITY «Альянс-Авто»» (90)"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.0,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.no_org_schema",
+   "category": "seo",
+   "title": "Нет разметки Organization/AutoDealer на главной",
+   "recommendation": "Добавить JSON-LD AutoDealer: название, адрес, телефон, часы работы, координаты. Помогает в Яндекс Картах и в расширенных сниппетах.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.75,
+   "evidence": [
+    "https://alyans-haval.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.0,
+   "priority": "P2"
+  },
+  {
+   "id": "tech.failed_resources",
+   "category": "technical",
+   "title": "Ресурсы сайта отдают ошибку (4xx/5xx): 2",
+   "recommendation": "Исправить пути к файлам или удалить подключения.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.75,
+   "evidence": [
+    "404 https://alyans-haval.ru/carTooltips.json",
+    "404 https://alyans-haval.ru/tooltips.json"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.0,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.dup_descriptions",
+   "category": "seo",
+   "title": "Одинаковые description: 1 групп",
+   "recommendation": "Генерировать description по шаблону с данными страницы.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.7,
+   "evidence": [
+    "«Официальный дилер HAVAL в России. На сайте Вы можете подобрать и купить автомоби»"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 5.6,
+   "priority": "P2"
+  },
+  {
+   "id": "comp.booking",
+   "category": "competitors",
+   "title": "У конкурентов есть, у вас нет: онлайн-бронирование / покупка",
+   "recommendation": "Есть у: Chery Центр (АТК Моторс). Добавить на сайт, чтобы не проигрывать при сравнении (покупатель авто в среднем смотрит 3–5 сайтов дилеров).",
+   "impact": 3,
+   "ease": 3,
+   "confidence": 0.53,
+   "evidence": [
+    "https://chery-atkmotors.ru/"
+   ],
+   "source": "competitor",
+   "details": {},
+   "score": 4.77,
+   "priority": "P2"
+  },
+  {
+   "id": "cards.no_card_pages",
+   "category": "cards",
+   "title": "Не найдены отдельные страницы карточек авто с ценой",
+   "recommendation": "Авто в наличии показываются без отдельных URL (или их нет). Каждому авто в наличии нужна своя страница: фото, цена, комплектация, VIN/год, кнопки заявки. Тогда карточки попадут в поиск Яндекса, их можно отправить клиенту ссылкой и запускать на них рекламу.",
+   "impact": 4,
+   "ease": 2,
+   "confidence": 0.55,
+   "evidence": [
+    "https://alyans-haval.ru/online-stock",
+    "https://alyans-haval.ru/test-online-stock"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 4.4,
+   "priority": "P2"
+  },
+  {
+   "id": "tech.small_taps",
+   "category": "technical",
+   "title": "Много мелких кнопок/ссылок на мобильном (<32px)",
+   "recommendation": "Увеличить зоны нажатия до 44–48px для кнопок и ссылок меню.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.5,
+   "evidence": [
+    "https://alyans-haval.ru/ — 86 элементов",
+    "https://alyans-haval.ru/online-stock — 86 элементов",
+    "https://alyans-haval.ru/test-online-stock — 86 элементов"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 4.0,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.sitemap_legal",
+   "category": "seo",
+   "title": "В sitemap 28 юридических страниц (согласия, политики) — 14% карты",
+   "recommendation": "Исключить служебные страницы из sitemap: они тратят краулинговый бюджет и размывают релевантность сайта.",
+   "impact": 1,
+   "ease": 5,
+   "confidence": 0.7,
+   "evidence": [
+    "https://alyans-haval.ru/soglasie-poluchit-predlozhenie-gwm-bezopasnost/",
+    "https://alyans-haval.ru/soglasie-poluchit-predlozhenie-o-pokupke-avto/",
+    "https://alyans-haval.ru/soglasie-poluchit-predlozhenie-pokupki-lizinga-dlia-iuridicheskikh-lits/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 3.5,
+   "priority": "P2"
+  },
+  {
+   "id": "comp.reviews",
+   "category": "competitors",
+   "title": "У конкурентов есть, у вас нет: отзывы клиентов на сайте",
+   "recommendation": "Есть у: Тойота Центр Чебоксары. Добавить на сайт, чтобы не проигрывать при сравнении (покупатель авто в среднем смотрит 3–5 сайтов дилеров).",
+   "impact": 2,
+   "ease": 3,
+   "confidence": 0.53,
+   "evidence": [
+    "https://toyota-cheb.tts.ru/"
+   ],
+   "source": "competitor",
+   "details": {},
+   "score": 3.18,
+   "priority": "P2"
+  }
+ ],
+ "plan": null,
+ "stats": {
+  "conversion": {
+   "tel_links_home": 2,
+   "cta_fold_desktop": 1,
+   "cta_fold_mobile": 0,
+   "messengers": [
+    "max",
+    "telegram"
+   ],
+   "forms_total": 10,
+   "lead_forms": 10,
+   "modal_forms": 0,
+   "credit_calc": true,
+   "tradein": true,
+   "tradein_valuation": true,
+   "widgets": [
+    "calltouch",
+    "generic_chat",
+    "recaptcha",
+    "smartcaptcha"
+   ],
+   "cta_examples": [
+    "Тест-драйв",
+    "РАССЧИТАТЬ",
+    "ПОЛУЧИТЬ ВЫГОДУ",
+    "ЗАПИСАТЬСЯ",
+    "Рассчитать кредит",
+    "Оценить трейд-ин",
+    "Запись на сервис",
+    "Трейд-ин"
+   ]
+  },
+  "cards": {
+   "cards_analyzed": 0,
+   "records": []
+  },
+  "technical": {
+   "pages_rendered": 25,
+   "page_errors": 0,
+   "js_exceptions": 0,
+   "console_errors": 2,
+   "broken_links": 0,
+   "perf": [
+    {
+     "url": "https://alyans-haval.ru/",
+     "ttfb": 0.62,
+     "fcp": 1.12,
+     "lcp": 4.52,
+     "cls": 0.033,
+     "dcl": 7.15,
+     "load": 20.01,
+     "requests": 78,
+     "weight_mb": 3.1
+    },
+    {
+     "url": "https://alyans-haval.ru/online-stock",
+     "ttfb": 0.97,
+     "fcp": 1.45,
+     "lcp": 13.29,
+     "cls": 0,
+     "dcl": 3.3,
+     "load": 11.46,
+     "requests": 48,
+     "weight_mb": 1.23
+    }
+   ]
+  },
+  "seo": {
+   "sitemap_urls": 207,
+   "sitemaps": [
+    "https://alyans-haval.ru/sitemap.xml"
+   ],
+   "pages_checked": 25,
+   "missing_description": 0,
+   "missing_h1": 1,
+   "yandex": {
+    "status": "not_configured",
+    "note": "Задайте YANDEX_SEARCH_API_KEY и YANDEX_FOLDER_ID, чтобы получить позиции в Яндексе."
+   }
+  }
+ },
+ "competitors": {
+  "features": [
+   [
+    "tel_click",
+    "Кликабельный телефон"
+   ],
+   [
+    "phone_fold_m",
+    "Телефон в первом экране на мобильном"
+   ],
+   [
+    "cta_fold_m",
+    "Кнопка заявки в первом экране на мобильном"
+   ],
+   [
+    "sticky_m",
+    "Закреплённая кнопка связи на мобильном"
+   ],
+   [
+    "messengers",
+    "Мессенджеры (WhatsApp/Telegram/MAX)"
+   ],
+   [
+    "chat",
+    "Онлайн-чат / обратный звонок"
+   ],
+   [
+    "credit_calc",
+    "Кредитный калькулятор"
+   ],
+   [
+    "tradein",
+    "Трейд-ин на сайте"
+   ],
+   [
+    "tradein_calc",
+    "Онлайн-оценка авто для трейд-ин"
+   ],
+   [
+    "testdrive",
+    "Запись на тест-драйв"
+   ],
+   [
+    "booking",
+    "Онлайн-бронирование / покупка"
+   ],
+   [
+    "stock_prices",
+    "Авто в наличии с ценами"
+   ],
+   [
+    "offers",
+    "Спецпредложения и акции"
+   ],
+   [
+    "reviews",
+    "Отзывы клиентов на сайте"
+   ],
+   [
+    "lead_forms",
+    "Формы заявки на страницах"
+   ],
+   [
+    "lcp",
+    "Скорость, LCP mobile (с)"
+   ]
+  ],
+  "rows": [
+   {
+    "name": "Haval Альянс-Авто",
+    "url": "https://alyans-haval.ru/",
+    "ok": true,
+    "tel_click": true,
+    "phone_fold_m": false,
+    "cta_fold_m": false,
+    "sticky_m": true,
+    "messengers": true,
+    "chat": true,
+    "credit_calc": true,
+    "tradein": true,
+    "tradein_calc": true,
+    "testdrive": true,
+    "booking": false,
+    "stock_prices": true,
+    "offers": true,
+    "reviews": false,
+    "lead_forms": true,
+    "lcp": 4.52
+   },
+   {
+    "name": "ТТС Чебоксары",
+    "url": "https://cheboksary.tts.ru/",
+    "ok": true,
+    "tel_click": true,
+    "phone_fold_m": false,
+    "cta_fold_m": true,
+    "sticky_m": false,
+    "messengers": true,
+    "chat": true,
+    "credit_calc": false,
+    "tradein": true,
+    "tradein_calc": true,
+    "testdrive": true,
+    "booking": false,
+    "stock_prices": true,
+    "offers": true,
+    "reviews": false,
+    "lead_forms": true,
+    "lcp": 13.76
+   },
+   {
+    "name": "Chery Центр (АТК Моторс)",
+    "url": "https://chery-atkmotors.ru/",
+    "ok": true,
+    "tel_click": true,
+    "phone_fold_m": true,
+    "cta_fold_m": false,
+    "sticky_m": true,
+    "messengers": true,
+    "chat": false,
+    "credit_calc": true,
+    "tradein": true,
+    "tradein_calc": false,
+    "testdrive": true,
+    "booking": true,
+    "stock_prices": true,
+    "offers": true,
+    "reviews": false,
+    "lead_forms": true,
+    "lcp": 13.35
+   },
+   {
+    "name": "Тойота Центр Чебоксары",
+    "url": "https://toyota-cheb.tts.ru/",
+    "ok": true,
+    "tel_click": true,
+    "phone_fold_m": true,
+    "cta_fold_m": false,
+    "sticky_m": false,
+    "messengers": false,
+    "chat": false,
+    "credit_calc": true,
+    "tradein": true,
+    "tradein_calc": true,
+    "testdrive": true,
+    "booking": false,
+    "stock_prices": false,
+    "offers": false,
+    "reviews": true,
+    "lead_forms": true,
+    "lcp": 14.84
+   }
+  ],
+  "matrix_summary": {
+   "мы": {
+    "Кликабельный телефон": true,
+    "Телефон в первом экране на мобильном": false,
+    "Кнопка заявки в первом экране на мобильном": false,
+    "Закреплённая кнопка связи на мобильном": true,
+    "Мессенджеры (WhatsApp/Telegram/MAX)": true,
+    "Онлайн-чат / обратный звонок": true,
+    "Кредитный калькулятор": true,
+    "Трейд-ин на сайте": true,
+    "Онлайн-оценка авто для трейд-ин": true,
+    "Запись на тест-драйв": true,
+    "Онлайн-бронирование / покупка": false,
+    "Авто в наличии с ценами": true,
+    "Спецпредложения и акции": true,
+    "Отзывы клиентов на сайте": false,
+    "Формы заявки на страницах": true
+   },
+   "ТТС Чебоксары": {
+    "Кликабельный телефон": true,
+    "Телефон в первом экране на мобильном": false,
+    "Кнопка заявки в первом экране на мобильном": true,
+    "Закреплённая кнопка связи на мобильном": false,
+    "Мессенджеры (WhatsApp/Telegram/MAX)": true,
+    "Онлайн-чат / обратный звонок": true,
+    "Кредитный калькулятор": false,
+    "Трейд-ин на сайте": true,
+    "Онлайн-оценка авто для трейд-ин": true,
+    "Запись на тест-драйв": true,
+    "Онлайн-бронирование / покупка": false,
+    "Авто в наличии с ценами": true,
+    "Спецпредложения и акции": true,
+    "Отзывы клиентов на сайте": false,
+    "Формы заявки на страницах": true
+   },
+   "Chery Центр (АТК Моторс)": {
+    "Кликабельный телефон": true,
+    "Телефон в первом экране на мобильном": true,
+    "Кнопка заявки в первом экране на мобильном": false,
+    "Закреплённая кнопка связи на мобильном": true,
+    "Мессенджеры (WhatsApp/Telegram/MAX)": true,
+    "Онлайн-чат / обратный звонок": false,
+    "Кредитный калькулятор": true,
+    "Трейд-ин на сайте": true,
+    "Онлайн-оценка авто для трейд-ин": false,
+    "Запись на тест-драйв": true,
+    "Онлайн-бронирование / покупка": true,
+    "Авто в наличии с ценами": true,
+    "Спецпредложения и акции": true,
+    "Отзывы клиентов на сайте": false,
+    "Формы заявки на страницах": true
+   },
+   "Тойота Центр Чебоксары": {
+    "Кликабельный телефон": true,
+    "Телефон в первом экране на мобильном": true,
+    "Кнопка заявки в первом экране на мобильном": false,
+    "Закреплённая кнопка связи на мобильном": false,
+    "Мессенджеры (WhatsApp/Telegram/MAX)": false,
+    "Онлайн-чат / обратный звонок": false,
+    "Кредитный калькулятор": true,
+    "Трейд-ин на сайте": true,
+    "Онлайн-оценка авто для трейд-ин": true,
+    "Запись на тест-драйв": true,
+    "Онлайн-бронирование / покупка": false,
+    "Авто в наличии с ценами": false,
+    "Спецпредложения и акции": false,
+    "Отзывы клиентов на сайте": true,
+    "Формы заявки на страницах": true
+   }
+  },
+  "our_strengths": [
+   "скорость загрузки (LCP 4.52 с против 13.35 с у лучшего конкурента)"
+  ]
+ },
+ "perf": [
+  {
+   "url": "https://alyans-haval.ru/",
+   "ttfb": 0.62,
+   "fcp": 1.12,
+   "lcp": 4.52,
+   "cls": 0.033,
+   "dcl": 7.15,
+   "load": 20.01,
+   "requests": 78,
+   "weight_mb": 3.1
+  },
+  {
+   "url": "https://alyans-haval.ru/online-stock",
+   "ttfb": 0.97,
+   "fcp": 1.45,
+   "lcp": 13.29,
+   "cls": 0,
+   "dcl": 3.3,
+   "load": 11.46,
+   "requests": 48,
+   "weight_mb": 1.23
+  }
+ ],
+ "diff": null,
+ "pages": [
+  {
+   "url": "https://alyans-haval.ru/",
+   "kind": "home",
+   "status": 200,
+   "title": "Официальный дилер автомобилей HAVAL в Чебоксарах — модельный ряд, комплектации и цены | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {
+    "desktop": "shots/home_desktop.jpg",
+    "mobile": "shots/home_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/online-stock",
+   "kind": "catalog",
+   "status": 200,
+   "title": "Новые автомобили HAVAL в наличии в Чебоксарах — купить у официального дилера | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {
+    "desktop": "shots/online_stock_desktop.jpg",
+    "mobile": "shots/online_stock_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/test-online-stock",
+   "kind": "catalog",
+   "status": 200,
+   "title": "Альянс-Авто — АВН тестовая",
+   "screenshots": {
+    "desktop": "shots/test_online_stock_desktop.jpg",
+    "mobile": "shots/test_online_stock_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/contacts",
+   "kind": "contacts",
+   "status": 200,
+   "title": "Альянс-Авто — Контакты",
+   "screenshots": {
+    "desktop": "shots/contacts_desktop.jpg",
+    "mobile": "shots/contacts_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/trade-in",
+   "kind": "tradein",
+   "status": 200,
+   "title": "Трейд-ин HAVAL в Чебоксарах — оценить авто и обменять с выгодой | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {
+    "desktop": "shots/trade_in_desktop.jpg",
+    "mobile": "shots/trade_in_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase/credit",
+   "kind": "credit",
+   "status": 200,
+   "title": "Купить HAVAL в кредит в Чебоксарах — программы автокредитования | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {
+    "desktop": "shots/purchase_credit_desktop.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase/choose-and-offer/test-drive",
+   "kind": "testdrive",
+   "status": 200,
+   "title": "Альянс-Авто — Тест-драйв",
+   "screenshots": {
+    "desktop": "shots/purchase_choose_and_offer_test_drive_desktop.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase/special-offer",
+   "kind": "offers",
+   "status": 200,
+   "title": "Акции и спецпредложения HAVAL в Чебоксарах — выгоды на новые автомобили | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {
+    "desktop": "shots/purchase_special_offer_desktop.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/models/haval-m6",
+   "kind": "model",
+   "status": 200,
+   "title": "Купить HAVAL M6 2026 в Чебоксарах — характеристики, комплектации и цены | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {
+    "desktop": "shots/models_haval_m6_desktop.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/models/haval-jolion",
+   "kind": "model",
+   "status": 200,
+   "title": "Купить HAVAL JOLION 2026 в Чебоксарах — характеристики, комплектации и цены | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {
+    "desktop": "shots/models_haval_jolion_desktop.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/models",
+   "kind": "other",
+   "status": 200,
+   "title": "Модельный ряд HAVAL 2026 — модели, комплектации и цены в Чебоксарах | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase",
+   "kind": "other",
+   "status": 200,
+   "title": "Альянс-Авто — Покупка",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase/catalogues",
+   "kind": "other",
+   "status": 200,
+   "title": "Прайс-листы HAVAL 2026 — каталоги, комплектации и цены моделей | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase/insurance",
+   "kind": "other",
+   "status": 200,
+   "title": "Страхование HAVAL в Чебоксарах — оформить КАСКО на автомобиль | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase/corporate_clients/leasing",
+   "kind": "other",
+   "status": 200,
+   "title": "HAVAL в лизинг в Чебоксарах — условия для юрлиц, ИП и физических лиц | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase/corporate_clients",
+   "kind": "other",
+   "status": 200,
+   "title": "HAVAL для корпоративных клиентов — автомобили и программы для бизнеса | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/purchase/corporate_clients/platform",
+   "kind": "other",
+   "status": 200,
+   "title": "GWM Мониторинг — система управления корпоративным автопарком | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/configurator",
+   "kind": "other",
+   "status": 200,
+   "title": "Конфигуратор HAVAL в Чебоксарах — выбрать модель и комплектацию | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/owners",
+   "kind": "other",
+   "status": 200,
+   "title": "Альянс-Авто — Владельцам",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/owners/haval-protection",
+   "kind": "other",
+   "status": 200,
+   "title": "HAVAL Защита+ — оформить постгарантийную защиту автомобиля | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/owners/roadside-assistance",
+   "kind": "other",
+   "status": 200,
+   "title": "Помощь на дороге HAVAL — условия программы и круглосуточная поддержка | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/gwm-security",
+   "kind": "other",
+   "status": 200,
+   "title": "GWM Безопасность — мониторинг и защита автомобиля HAVAL | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/engine-care",
+   "kind": "other",
+   "status": 200,
+   "title": "Альянс-Авто — Забота о двигателе",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/owners/collection-for-cars",
+   "kind": "other",
+   "status": 200,
+   "title": "Оригинальные аксессуары HAVAL в Чебоксарах — каталоги для автомобилей | HAVAL CITY «Альянс-Авто»",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://alyans-haval.ru/offers/zimnie-shiny",
+   "kind": "other",
+   "status": 200,
+   "title": "Альянс-Авто — Проведите зиму с комфортом",
+   "screenshots": {},
+   "error": ""
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+# Еженедельный аудит всех сайтов: отчёты сохраняются как артефакты и (опционально) коммитятся в ветку reports,
+# краткая сводка уходит в Telegram. ВАЖНО: часть сайтов холдинга обрывает соединения с зарубежных IP —
+# для стабильных результатов используйте self-hosted runner на VPS в РФ (runs-on: self-hosted).
+name: site-audit
+on:
+  schedule:
+    - cron: "0 4 * * 1"        # понедельник, 07:00 МСК
+  workflow_dispatch:
+    inputs:
+      targets: {description: "ключи сайтов через пробел или --all", default: "--all"}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - name: Restore history
+        run: git fetch origin reports:reports 2>/dev/null && git checkout reports -- reports 2>/dev/null || echo "история пока пуста"
+      - name: Run audit
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          YANDEX_LLM_API_KEY: ${{ secrets.YANDEX_LLM_API_KEY }}
+          YANDEX_SEARCH_API_KEY: ${{ secrets.YANDEX_SEARCH_API_KEY }}
+          YANDEX_FOLDER_ID: ${{ secrets.YANDEX_FOLDER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m dealer_audit run ${{ github.event.inputs.targets || '--all' }}
+      - uses: actions/upload-artifact@v4
+        with: {name: reports, path: reports/, retention-days: 90}
+      - name: Save history to reports branch
+        # ветка reports = код + папка reports/ (история прогонов для diff и «зависших» карточек)
+        run: |
+          git config user.name "audit-bot"; git config user.email "audit-bot@users.noreply.github.com"
+          git add -f reports && git commit -qm "audit $(date +%F)" || exit 0
+          git push -f origin HEAD:reports

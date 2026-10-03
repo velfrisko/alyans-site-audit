@@ -1,0 +1,1054 @@
+{
+ "meta": {
+  "site": {
+   "name": "Альянс-Авто: авто из США",
+   "url": "https://autoimport.alyans-auto.ru/",
+   "type": "import",
+   "brand": "авто из сша",
+   "keywords": [
+    "авто из сша чебоксары",
+    "пригнать авто из сша",
+    "купить bmw x5 из сша",
+    "авто под заказ из сша с доставкой",
+    "mercedes gle из сша купить"
+   ],
+   "key": "autoimport",
+   "city": "Чебоксары",
+   "competitors": [
+    {
+     "name": "ТТС Чебоксары",
+     "url": "https://cheboksary.tts.ru/"
+    },
+    {
+     "name": "Chery Центр (АТК Моторс)",
+     "url": "https://chery-atkmotors.ru/"
+    },
+    {
+     "name": "Тойота Центр Чебоксары",
+     "url": "https://toyota-cheb.tts.ru/"
+    }
+   ]
+  },
+  "date": "2026-10-03 20:11",
+  "elapsed_s": 643,
+  "pages_rendered": 10,
+  "urls_discovered": 18,
+  "llm": {
+   "provider": "none",
+   "model": "",
+   "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 0
+   }
+  },
+  "competitors": [
+   "https://cheboksary.tts.ru/",
+   "https://chery-atkmotors.ru/",
+   "https://toyota-cheb.tts.ru/"
+  ],
+  "version": "0.1.0"
+ },
+ "scores": {
+  "conversion": 7,
+  "cards": 87,
+  "technical": 70,
+  "seo": 32,
+  "competitors": 93
+ },
+ "findings": [
+  {
+   "id": "conv.mobile_overlay",
+   "category": "conversion",
+   "title": "На мобильном всплывающие слои закрывают 26% первого экрана",
+   "recommendation": "Сделать cookie-уведомление компактной полосой (1–2 строки) внизу, не показывать одновременно несколько виджетов. Сейчас они перекрывают кнопки и предложение при первом входе.",
+   "impact": 4,
+   "ease": 5,
+   "confidence": 0.7,
+   "evidence": [
+    "shots/home_mobile.jpg",
+    "слой: «Для улучшения работы сайта и его взаимодействия с пользователями мы используем ф»",
+    "слой: «Политика обработки данных»"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 14.0,
+   "priority": "P0"
+  },
+  {
+   "id": "conv.mobile_no_phone_fold",
+   "category": "conversion",
+   "title": "В мобильной версии телефона нет на первом экране",
+   "recommendation": "Добавить иконку звонка в шапку или закреплённую кнопку «Позвонить». Есть у конкурентов: Chery Центр (АТК Моторс), Тойота Центр Чебоксары.",
+   "impact": 4,
+   "ease": 4,
+   "confidence": 0.85,
+   "evidence": [
+    "shots/home_mobile.jpg",
+    "https://chery-atkmotors.ru/",
+    "https://toyota-cheb.tts.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 13.6,
+   "priority": "P0"
+  },
+  {
+   "id": "seo.sitemap_empty",
+   "category": "seo",
+   "title": "sitemap.xml пустой (0 страниц этого сайта)",
+   "recommendation": "Генерировать sitemap автоматически: главная, каталог, все карточки авто в наличии, модели, акции. Без него новые авто дольше попадают в поиск.",
+   "impact": 4,
+   "ease": 4,
+   "confidence": 0.85,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/sitemap.xml"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 13.6,
+   "priority": "P0"
+  },
+  {
+   "id": "conv.no_cta_fold_mobile",
+   "category": "conversion",
+   "title": "На первом экране мобильной версии нет кнопки заявки",
+   "recommendation": "Вынести главную кнопку в первый экран или сделать закреплённую нижнюю панель (Позвонить / Написать / Заявка). Есть у конкурентов: ТТС Чебоксары.",
+   "impact": 4,
+   "ease": 4,
+   "confidence": 0.8,
+   "evidence": [
+    "shots/home_mobile.jpg",
+    "https://cheboksary.tts.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 12.8,
+   "priority": "P0"
+  },
+  {
+   "id": "seo.no_h1",
+   "category": "seo",
+   "title": "Нет H1: 2 стр.",
+   "recommendation": "Один H1 на страницу с главным ключом (модель/категория + город).",
+   "impact": 3,
+   "ease": 5,
+   "confidence": 0.8,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/",
+    "https://autoimport.alyans-auto.ru/cars"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 12.0,
+   "priority": "P0"
+  },
+  {
+   "id": "conv.card_mobile_cta_below",
+   "category": "conversion",
+   "title": "В мобильной карточке авто кнопка заявки не видна без прокрутки",
+   "recommendation": "Закрепить панель «Цена · Кнопка заявки» внизу экрана карточки на мобильном.",
+   "impact": 4,
+   "ease": 4,
+   "confidence": 0.65,
+   "evidence": [
+    "shots/cars_mercedes_benz_gle_coupe_amg_ii_2025_mobile.jpg",
+    "shots/cars_ford_ranger_2025_mobile.jpg"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 10.4,
+   "priority": "P1"
+  },
+  {
+   "id": "conv.no_credit_calc",
+   "category": "conversion",
+   "title": "Нет кредитного калькулятора (ежемесячный платёж)",
+   "recommendation": "Добавить калькулятор платежа на главную/карточку/страницу кредита с кнопкой «Получить одобрение». Около половины новых авто в РФ покупают в кредит. Есть у конкурентов: Chery Центр (АТК Моторс), Тойота Центр Чебоксары.",
+   "impact": 4,
+   "ease": 3,
+   "confidence": 0.8,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/",
+    "https://chery-atkmotors.ru/",
+    "https://toyota-cheb.tts.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 9.6,
+   "priority": "P1"
+  },
+  {
+   "id": "conv.no_sticky_mobile",
+   "category": "conversion",
+   "title": "Нет закреплённой кнопки связи на мобильном",
+   "recommendation": "Закреплённая панель «Позвонить / WhatsApp / Telegram» на мобильном: телефон и мессенджер всегда в зоне большого пальца. Есть у конкурентов: Chery Центр (АТК Моторс).",
+   "impact": 3,
+   "ease": 4,
+   "confidence": 0.75,
+   "evidence": [
+    "shots/home_mobile.jpg",
+    "https://chery-atkmotors.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 9.0,
+   "priority": "P1"
+  },
+  {
+   "id": "seo.dup_titles",
+   "category": "seo",
+   "title": "Одинаковые title у разных страниц: 1 групп",
+   "recommendation": "Сделать title уникальными (шаблон для карточек: «Марка Модель Год — купить в <город>, цена X ₽»).",
+   "impact": 3,
+   "ease": 4,
+   "confidence": 0.75,
+   "evidence": [
+    "«Альянс-Авто — Автомобили из США под заказ с доставкой по РФ»"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 9.0,
+   "priority": "P1"
+  },
+  {
+   "id": "conv.long_forms",
+   "category": "conversion",
+   "title": "Длинные формы заявки: до 7 полей",
+   "recommendation": "Оставить 2 поля (имя, телефон); остальное менеджер уточнит в звонке. Каждое лишнее поле снижает конверсию формы.",
+   "impact": 3,
+   "ease": 4,
+   "confidence": 0.7,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/ — поля: Например, Audi A6, request[Возраст авто], Страна импорта\nВыберите страну, Бюджет\nВыберите бюджет\n8–10 мл, Опишите в произвольной форме, Как Вас зовут?, +7 (___) ___ __ __"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 8.4,
+   "priority": "P1"
+  },
+  {
+   "id": "tech.forms_js_risk",
+   "category": "technical",
+   "title": "JS-исключения на страницах с формами заявок",
+   "recommendation": "Проверить отправку форм на этих страницах (запуск агента с флагом --test-forms).",
+   "impact": 4,
+   "ease": 4,
+   "confidence": 0.45,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/",
+    "https://autoimport.alyans-auto.ru/cars"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 7.2,
+   "priority": "P1"
+  },
+  {
+   "id": "cards.no_vin",
+   "category": "cards",
+   "title": "В карточках авто с пробегом/импорта нет VIN или отчёта об истории",
+   "recommendation": "Показывать VIN (частично) и ссылку на отчёт (Автотека/Автокод). Снимает главный страх покупателя б/у авто.",
+   "impact": 3,
+   "ease": 4,
+   "confidence": 0.55,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025",
+    "https://autoimport.alyans-auto.ru/cars/ford-ranger-2025",
+    "https://autoimport.alyans-auto.ru/cars/bmw-x5-2025",
+    "https://autoimport.alyans-auto.ru/cars/mercedes-benz-mercedes-benz-gle-63-amg-v167-2026"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.6,
+   "priority": "P2"
+  },
+  {
+   "id": "tech.js_exceptions",
+   "category": "technical",
+   "title": "Необработанные JS-исключения: 3 видов",
+   "recommendation": "Передать разработчику: исключения могут ломать формы, калькуляторы и галереи. Подключить мониторинг ошибок (Sentry / Hawk).",
+   "impact": 3,
+   "ease": 3,
+   "confidence": 0.7,
+   "evidence": [
+    "JS exception: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev enviro — https://autoimport.alyans-auto.ru/",
+    "JS exception: Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev enviro — https://autoimport.alyans-auto.ru/",
+    "JS exception: Uncaught (in promise) undefined — https://autoimport.alyans-auto.ru/cars"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.3,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.title_length",
+   "category": "seo",
+   "title": "Title слишком короткий/длинный: 7 стр.",
+   "recommendation": "Оптимально 40–70 символов: модель + ключевое слово + город + выгода.",
+   "impact": 2,
+   "ease": 5,
+   "confidence": 0.6,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025 — «Mercedes-Benz GLE Coupe AMG II 2025 - Альянс-АвтоМаркет - Автомобили из США под заказ с до» (103)",
+    "https://autoimport.alyans-auto.ru/cars/ford-ranger-2025 — «Ford Ranger 2025 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ» (84)",
+    "https://autoimport.alyans-auto.ru/cars/bmw-x5-2025 — «BMW X5 xDrive40i 2025 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ» (89)",
+    "https://autoimport.alyans-auto.ru/cars/mercedes-benz-mercedes-benz-gle-63-amg-v167-2026 — «Mercedes-Benz Mercedes-Benz GLE 63 AMG (V167) 2026 - Альянс-АвтоМаркет - Автомобили из США» (118)"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.0,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.no_org_schema",
+   "category": "seo",
+   "title": "Нет разметки Organization/AutoDealer на главной",
+   "recommendation": "Добавить JSON-LD AutoDealer: название, адрес, телефон, часы работы, координаты. Помогает в Яндекс Картах и в расширенных сниппетах.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.75,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.0,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.no_car_schema",
+   "category": "seo",
+   "title": "В карточках авто нет микроразметки Car/Product/Offer",
+   "recommendation": "Добавить schema.org Car + Offer (цена, наличие, VIN, пробег) — это расширенные сниппеты с ценой в выдаче.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.75,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 6.0,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.dup_descriptions",
+   "category": "seo",
+   "title": "Одинаковые description: 1 групп",
+   "recommendation": "Генерировать description по шаблону с данными страницы.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.7,
+   "evidence": [
+    "«Подбор и доставка автомобилей из США под ключ. Прозрачные условия, юридическая ч»"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 5.6,
+   "priority": "P2"
+  },
+  {
+   "id": "tech.mid_lcp.card",
+   "category": "technical",
+   "title": "Загрузка на мобильном ниже нормы: LCP 3.97 с",
+   "recommendation": "Оптимизировать главный баннер/фото первого экрана (preload, WebP, правильный размер).",
+   "impact": 3,
+   "ease": 3,
+   "confidence": 0.55,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025 — LCP 3.97 с, вес 1.17 МБ"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 4.95,
+   "priority": "P2"
+  },
+  {
+   "id": "cards.inconsistent_photos",
+   "category": "cards",
+   "title": "Карточки заполнены неравномерно: от 8 до 35 фото",
+   "recommendation": "Ввести стандарт карточки (чек-лист фото и полей) и проверять его перед публикацией.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.6,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025",
+    "https://autoimport.alyans-auto.ru/cars/ford-ranger-2025",
+    "https://autoimport.alyans-auto.ru/cars/bmw-x5-2025",
+    "https://autoimport.alyans-auto.ru/cars/mercedes-benz-mercedes-benz-gle-63-amg-v167-2026"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 4.8,
+   "priority": "P2"
+  },
+  {
+   "id": "conv.no_chat_widget",
+   "category": "conversion",
+   "title": "Нет онлайн-чата / виджета обратного звонка",
+   "recommendation": "Подключить чат или обратный звонок (Jivo, Bitrix24, Envybox) с переводом в мессенджеры. Ловит тех, кто не готов звонить. Есть у конкурентов: ТТС Чебоксары.",
+   "impact": 2,
+   "ease": 4,
+   "confidence": 0.6,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/",
+    "https://cheboksary.tts.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 4.8,
+   "priority": "P2"
+  },
+  {
+   "id": "comp.booking",
+   "category": "competitors",
+   "title": "У конкурентов есть, у вас нет: онлайн-бронирование / покупка",
+   "recommendation": "Есть у: Chery Центр (АТК Моторс). Добавить на сайт, чтобы не проигрывать при сравнении (покупатель авто в среднем смотрит 3–5 сайтов дилеров).",
+   "impact": 3,
+   "ease": 3,
+   "confidence": 0.53,
+   "evidence": [
+    "https://chery-atkmotors.ru/"
+   ],
+   "source": "competitor",
+   "details": {},
+   "score": 4.77,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.no_og",
+   "category": "seo",
+   "title": "Нет Open Graph-разметки",
+   "recommendation": "Добавить og:title/og:image: ссылки, отправленные в мессенджерах, будут с картинкой и ценой.",
+   "impact": 1,
+   "ease": 5,
+   "confidence": 0.8,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 4.0,
+   "priority": "P2"
+  },
+  {
+   "id": "tech.console_errors",
+   "category": "technical",
+   "title": "Ошибки в консоли браузера: 7 видов",
+   "recommendation": "Разобрать ошибки консоли (часто это 404 скриптов/картинок и падающие виджеты).",
+   "impact": 2,
+   "ease": 3,
+   "confidence": 0.6,
+   "evidence": [
+    "(Yandex Maps JS API): api is already enabled on this page with same namespace. — https://autoimport.alyans-auto.ru/",
+    "Access to XMLHttpRequest at 'https://mod.calltouch.ru/set_external_data.php' from origin 'https://autoimport.alyans-auto.ru' has been blocked by CORS policy: Re — https://autoimport.alyans-auto.ru/cars",
+    "Calltouch global cookie error:  null — https://autoimport.alyans-auto.ru/cars",
+    "TypeError: Failed to fetch dynamically imported module: https://autoimport.alyans-auto.ru/_nuxt/C2GGmK9t.js — https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 3.6,
+   "priority": "P2"
+  },
+  {
+   "id": "seo.no_clean_param",
+   "category": "seo",
+   "title": "В robots.txt нет Clean-param для UTM-меток",
+   "recommendation": "Добавить Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid, чтобы рекламные метки не плодили дубли в Яндексе.",
+   "impact": 1,
+   "ease": 5,
+   "confidence": 0.7,
+   "evidence": [
+    "https://autoimport.alyans-auto.ru/robots.txt"
+   ],
+   "source": "rule",
+   "details": {},
+   "score": 3.5,
+   "priority": "P2"
+  }
+ ],
+ "plan": null,
+ "stats": {
+  "conversion": {
+   "tel_links_home": 3,
+   "cta_fold_desktop": 4,
+   "cta_fold_mobile": 0,
+   "messengers": [
+    "telegram"
+   ],
+   "forms_total": 5,
+   "lead_forms": 5,
+   "modal_forms": 7,
+   "credit_calc": false,
+   "tradein": true,
+   "tradein_valuation": true,
+   "widgets": [
+    "calltouch",
+    "smartcaptcha"
+   ],
+   "cta_examples": [
+    "Бесплатная консультация",
+    "Расчёт стоимости",
+    "Покупка в трейд-ин",
+    "Получить консультацию",
+    "Рассчитать стоимость",
+    "Оставить заявку",
+    "Получить выгодные условия"
+   ]
+  },
+  "cards": {
+   "cards_analyzed": 7,
+   "avg_completeness": 100,
+   "avg_photos": 18.1,
+   "records": [
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025",
+     "title": "Mercedes-Benz GLE Coupe AMG II",
+     "price": 18400000,
+     "photos": 22,
+     "specs": 6,
+     "year": "2025",
+     "mileage": null,
+     "vin": false,
+     "in_stock": true,
+     "in_transit": true,
+     "on_order": true,
+     "sold_label": false,
+     "price_on_request": false,
+     "cta": true,
+     "credit": false,
+     "tradein": true,
+     "completeness": 100
+    },
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars/ford-ranger-2025",
+     "title": "Ford Ranger",
+     "price": 9970000,
+     "photos": 35,
+     "specs": 8,
+     "year": "2025",
+     "mileage": null,
+     "vin": false,
+     "in_stock": true,
+     "in_transit": true,
+     "on_order": true,
+     "sold_label": false,
+     "price_on_request": false,
+     "cta": true,
+     "credit": false,
+     "tradein": true,
+     "completeness": 100
+    },
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars/bmw-x5-2025",
+     "title": "BMW X5 xDrive40i",
+     "price": 17050000,
+     "photos": 34,
+     "specs": 8,
+     "year": "2025",
+     "mileage": null,
+     "vin": false,
+     "in_stock": true,
+     "in_transit": true,
+     "on_order": true,
+     "sold_label": false,
+     "price_on_request": false,
+     "cta": true,
+     "credit": false,
+     "tradein": true,
+     "completeness": 100
+    },
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars/mercedes-benz-mercedes-benz-gle-63-amg-v167-2026",
+     "title": "Mercedes-Benz Mercedes-Benz GLE 63 AMG (V167)",
+     "price": 19184000,
+     "photos": 8,
+     "specs": 7,
+     "year": "2026",
+     "mileage": null,
+     "vin": false,
+     "in_stock": true,
+     "in_transit": true,
+     "on_order": true,
+     "sold_label": false,
+     "price_on_request": false,
+     "cta": true,
+     "credit": false,
+     "tradein": true,
+     "completeness": 100
+    },
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gls-450-x167-2026",
+     "title": "Mercedes-Benz GLS 450 (X167)",
+     "price": 17850000,
+     "photos": 10,
+     "specs": 7,
+     "year": "2026",
+     "mileage": null,
+     "vin": false,
+     "in_stock": true,
+     "in_transit": true,
+     "on_order": true,
+     "sold_label": false,
+     "price_on_request": false,
+     "cta": true,
+     "credit": false,
+     "tradein": true,
+     "completeness": 100
+    },
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars/bmw-x5-xdrive40i-g05-lci-2026",
+     "title": "BMW X5 xDrive40i (G05 LCI)",
+     "price": 12782000,
+     "photos": 9,
+     "specs": 8,
+     "year": "2026",
+     "mileage": null,
+     "vin": false,
+     "in_stock": true,
+     "in_transit": true,
+     "on_order": true,
+     "sold_label": false,
+     "price_on_request": false,
+     "cta": true,
+     "credit": false,
+     "tradein": true,
+     "completeness": 100
+    },
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars/range-rover-sport-p400-dynamic-hse-2025",
+     "title": "Land Rover Range Rover Sport",
+     "price": 17510000,
+     "photos": 9,
+     "specs": 7,
+     "year": "2025",
+     "mileage": null,
+     "vin": false,
+     "in_stock": true,
+     "in_transit": true,
+     "on_order": true,
+     "sold_label": false,
+     "price_on_request": false,
+     "cta": true,
+     "credit": false,
+     "tradein": true,
+     "completeness": 100
+    }
+   ],
+   "stale": 0
+  },
+  "technical": {
+   "pages_rendered": 10,
+   "page_errors": 0,
+   "js_exceptions": 3,
+   "console_errors": 7,
+   "broken_links": 0,
+   "perf": [
+    {
+     "url": "https://autoimport.alyans-auto.ru/",
+     "ttfb": 0.48,
+     "fcp": 1.2,
+     "lcp": 1.2,
+     "cls": 0.027,
+     "dcl": 3.24,
+     "load": 26.45,
+     "requests": 77,
+     "weight_mb": 4.55
+    },
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025",
+     "ttfb": 0.4,
+     "fcp": 1.36,
+     "lcp": 3.97,
+     "cls": 0,
+     "dcl": 2.99,
+     "load": 11.03,
+     "requests": 67,
+     "weight_mb": 1.17
+    },
+    {
+     "url": "https://autoimport.alyans-auto.ru/cars",
+     "ttfb": 0.42,
+     "fcp": 1.53,
+     "lcp": 1.53,
+     "cls": 0.027,
+     "dcl": 5.9,
+     "load": 8.9,
+     "requests": 34,
+     "weight_mb": 1.4
+    }
+   ]
+  },
+  "seo": {
+   "sitemap_urls": 0,
+   "sitemaps": [
+    "https://autoimport.alyans-auto.ru/sitemap.xml"
+   ],
+   "pages_checked": 9,
+   "missing_description": 0,
+   "missing_h1": 2,
+   "yandex": {
+    "status": "not_configured",
+    "note": "Задайте YANDEX_SEARCH_API_KEY и YANDEX_FOLDER_ID, чтобы получить позиции в Яндексе."
+   }
+  }
+ },
+ "competitors": {
+  "features": [
+   [
+    "tel_click",
+    "Кликабельный телефон"
+   ],
+   [
+    "phone_fold_m",
+    "Телефон в первом экране на мобильном"
+   ],
+   [
+    "cta_fold_m",
+    "Кнопка заявки в первом экране на мобильном"
+   ],
+   [
+    "sticky_m",
+    "Закреплённая кнопка связи на мобильном"
+   ],
+   [
+    "messengers",
+    "Мессенджеры (WhatsApp/Telegram/MAX)"
+   ],
+   [
+    "chat",
+    "Онлайн-чат / обратный звонок"
+   ],
+   [
+    "credit_calc",
+    "Кредитный калькулятор"
+   ],
+   [
+    "tradein",
+    "Трейд-ин на сайте"
+   ],
+   [
+    "tradein_calc",
+    "Онлайн-оценка авто для трейд-ин"
+   ],
+   [
+    "testdrive",
+    "Запись на тест-драйв"
+   ],
+   [
+    "booking",
+    "Онлайн-бронирование / покупка"
+   ],
+   [
+    "stock_prices",
+    "Авто в наличии с ценами"
+   ],
+   [
+    "offers",
+    "Спецпредложения и акции"
+   ],
+   [
+    "reviews",
+    "Отзывы клиентов на сайте"
+   ],
+   [
+    "lead_forms",
+    "Формы заявки на страницах"
+   ],
+   [
+    "lcp",
+    "Скорость, LCP mobile (с)"
+   ]
+  ],
+  "rows": [
+   {
+    "name": "Альянс-Авто: авто из США",
+    "url": "https://autoimport.alyans-auto.ru/",
+    "ok": true,
+    "tel_click": true,
+    "phone_fold_m": false,
+    "cta_fold_m": false,
+    "sticky_m": false,
+    "messengers": true,
+    "chat": false,
+    "credit_calc": false,
+    "tradein": true,
+    "tradein_calc": true,
+    "testdrive": false,
+    "booking": false,
+    "stock_prices": true,
+    "offers": true,
+    "reviews": true,
+    "lead_forms": true,
+    "lcp": 1.2
+   },
+   {
+    "name": "ТТС Чебоксары",
+    "url": "https://cheboksary.tts.ru/",
+    "ok": true,
+    "tel_click": true,
+    "phone_fold_m": false,
+    "cta_fold_m": true,
+    "sticky_m": false,
+    "messengers": true,
+    "chat": true,
+    "credit_calc": false,
+    "tradein": true,
+    "tradein_calc": true,
+    "testdrive": true,
+    "booking": false,
+    "stock_prices": true,
+    "offers": true,
+    "reviews": false,
+    "lead_forms": true,
+    "lcp": 13.76
+   },
+   {
+    "name": "Chery Центр (АТК Моторс)",
+    "url": "https://chery-atkmotors.ru/",
+    "ok": true,
+    "tel_click": true,
+    "phone_fold_m": true,
+    "cta_fold_m": false,
+    "sticky_m": true,
+    "messengers": true,
+    "chat": false,
+    "credit_calc": true,
+    "tradein": true,
+    "tradein_calc": false,
+    "testdrive": true,
+    "booking": true,
+    "stock_prices": true,
+    "offers": true,
+    "reviews": false,
+    "lead_forms": true,
+    "lcp": 13.35
+   },
+   {
+    "name": "Тойота Центр Чебоксары",
+    "url": "https://toyota-cheb.tts.ru/",
+    "ok": true,
+    "tel_click": true,
+    "phone_fold_m": true,
+    "cta_fold_m": false,
+    "sticky_m": false,
+    "messengers": false,
+    "chat": false,
+    "credit_calc": true,
+    "tradein": true,
+    "tradein_calc": true,
+    "testdrive": true,
+    "booking": false,
+    "stock_prices": false,
+    "offers": false,
+    "reviews": true,
+    "lead_forms": true,
+    "lcp": 14.84
+   }
+  ],
+  "matrix_summary": {
+   "мы": {
+    "Кликабельный телефон": true,
+    "Телефон в первом экране на мобильном": false,
+    "Кнопка заявки в первом экране на мобильном": false,
+    "Закреплённая кнопка связи на мобильном": false,
+    "Мессенджеры (WhatsApp/Telegram/MAX)": true,
+    "Онлайн-чат / обратный звонок": false,
+    "Кредитный калькулятор": false,
+    "Трейд-ин на сайте": true,
+    "Онлайн-оценка авто для трейд-ин": true,
+    "Запись на тест-драйв": false,
+    "Онлайн-бронирование / покупка": false,
+    "Авто в наличии с ценами": true,
+    "Спецпредложения и акции": true,
+    "Отзывы клиентов на сайте": true,
+    "Формы заявки на страницах": true
+   },
+   "ТТС Чебоксары": {
+    "Кликабельный телефон": true,
+    "Телефон в первом экране на мобильном": false,
+    "Кнопка заявки в первом экране на мобильном": true,
+    "Закреплённая кнопка связи на мобильном": false,
+    "Мессенджеры (WhatsApp/Telegram/MAX)": true,
+    "Онлайн-чат / обратный звонок": true,
+    "Кредитный калькулятор": false,
+    "Трейд-ин на сайте": true,
+    "Онлайн-оценка авто для трейд-ин": true,
+    "Запись на тест-драйв": true,
+    "Онлайн-бронирование / покупка": false,
+    "Авто в наличии с ценами": true,
+    "Спецпредложения и акции": true,
+    "Отзывы клиентов на сайте": false,
+    "Формы заявки на страницах": true
+   },
+   "Chery Центр (АТК Моторс)": {
+    "Кликабельный телефон": true,
+    "Телефон в первом экране на мобильном": true,
+    "Кнопка заявки в первом экране на мобильном": false,
+    "Закреплённая кнопка связи на мобильном": true,
+    "Мессенджеры (WhatsApp/Telegram/MAX)": true,
+    "Онлайн-чат / обратный звонок": false,
+    "Кредитный калькулятор": true,
+    "Трейд-ин на сайте": true,
+    "Онлайн-оценка авто для трейд-ин": false,
+    "Запись на тест-драйв": true,
+    "Онлайн-бронирование / покупка": true,
+    "Авто в наличии с ценами": true,
+    "Спецпредложения и акции": true,
+    "Отзывы клиентов на сайте": false,
+    "Формы заявки на страницах": true
+   },
+   "Тойота Центр Чебоксары": {
+    "Кликабельный телефон": true,
+    "Телефон в первом экране на мобильном": true,
+    "Кнопка заявки в первом экране на мобильном": false,
+    "Закреплённая кнопка связи на мобильном": false,
+    "Мессенджеры (WhatsApp/Telegram/MAX)": false,
+    "Онлайн-чат / обратный звонок": false,
+    "Кредитный калькулятор": true,
+    "Трейд-ин на сайте": true,
+    "Онлайн-оценка авто для трейд-ин": true,
+    "Запись на тест-драйв": true,
+    "Онлайн-бронирование / покупка": false,
+    "Авто в наличии с ценами": false,
+    "Спецпредложения и акции": false,
+    "Отзывы клиентов на сайте": true,
+    "Формы заявки на страницах": true
+   }
+  },
+  "our_strengths": [
+   "скорость загрузки (LCP 1.2 с против 13.35 с у лучшего конкурента)"
+  ]
+ },
+ "perf": [
+  {
+   "url": "https://autoimport.alyans-auto.ru/",
+   "ttfb": 0.48,
+   "fcp": 1.2,
+   "lcp": 1.2,
+   "cls": 0.027,
+   "dcl": 3.24,
+   "load": 26.45,
+   "requests": 77,
+   "weight_mb": 4.55
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025",
+   "ttfb": 0.4,
+   "fcp": 1.36,
+   "lcp": 3.97,
+   "cls": 0,
+   "dcl": 2.99,
+   "load": 11.03,
+   "requests": 67,
+   "weight_mb": 1.17
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars",
+   "ttfb": 0.42,
+   "fcp": 1.53,
+   "lcp": 1.53,
+   "cls": 0.027,
+   "dcl": 5.9,
+   "load": 8.9,
+   "requests": 34,
+   "weight_mb": 1.4
+  }
+ ],
+ "diff": null,
+ "pages": [
+  {
+   "url": "https://autoimport.alyans-auto.ru/",
+   "kind": "home",
+   "status": 200,
+   "title": "Альянс-Авто — Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {
+    "desktop": "shots/home_desktop.jpg",
+    "mobile": "shots/home_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars",
+   "kind": "catalog",
+   "status": 200,
+   "title": "Альянс-Авто — Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {
+    "desktop": "shots/cars_desktop.jpg",
+    "mobile": "shots/cars_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gle-coupe-amg-ii-2025",
+   "kind": "card",
+   "status": 200,
+   "title": "Mercedes-Benz GLE Coupe AMG II 2025 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {
+    "desktop": "shots/cars_mercedes_benz_gle_coupe_amg_ii_2025_desktop.jpg",
+    "mobile": "shots/cars_mercedes_benz_gle_coupe_amg_ii_2025_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/ford-ranger-2025",
+   "kind": "card",
+   "status": 200,
+   "title": "Ford Ranger 2025 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {
+    "desktop": "shots/cars_ford_ranger_2025_desktop.jpg",
+    "mobile": "shots/cars_ford_ranger_2025_mobile.jpg"
+   },
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/land-rover-range-rover-2025",
+   "kind": "card?",
+   "status": 502,
+   "title": "",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/bmw-x5-2025",
+   "kind": "card",
+   "status": 200,
+   "title": "BMW X5 xDrive40i 2025 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/mercedes-benz-mercedes-benz-gle-63-amg-v167-2026",
+   "kind": "card",
+   "status": 200,
+   "title": "Mercedes-Benz Mercedes-Benz GLE 63 AMG (V167) 2026 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/mercedes-benz-gls-450-x167-2026",
+   "kind": "card",
+   "status": 200,
+   "title": "Mercedes-Benz GLS 450 (X167) 2026 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/bmw-x5-xdrive40i-g05-lci-2026",
+   "kind": "card",
+   "status": 200,
+   "title": "BMW X5 xDrive40i (G05 LCI) 2026 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {},
+   "error": ""
+  },
+  {
+   "url": "https://autoimport.alyans-auto.ru/cars/range-rover-sport-p400-dynamic-hse-2025",
+   "kind": "card",
+   "status": 200,
+   "title": "Land Rover Range Rover Sport 2025 - Альянс-АвтоМаркет - Автомобили из США под заказ с доставкой по РФ",
+   "screenshots": {},
+   "error": ""
+  }
+ ]
+}

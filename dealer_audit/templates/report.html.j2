@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Аудит сайта — {{ m.site.name or m.site.url }} — {{ m.date }}</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#14171c;--muted:#5d6672;--line:#e3e6ea;--accent:#c62828;--p0:#c62828;--p1:#e08a00;--p2:#6b7684;--ok:#1f8a4c;--chip:#eef1f4}
+@media (prefers-color-scheme:dark){:root{--bg:#111418;--card:#1a1e24;--ink:#e8ebef;--muted:#9aa4b0;--line:#2b313a;--chip:#252b33;--p2:#8c97a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:20px;margin:36px 0 12px}h3{font-size:16px;margin:0 0 6px}
+.muted{color:var(--muted)}.small{font-size:13px}a{color:inherit}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.grid{display:grid;gap:12px}.g5{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.score{font-size:30px;font-weight:700;font-variant-numeric:tabular-nums}.bar{height:6px;border-radius:3px;background:var(--chip);overflow:hidden;margin-top:6px}.bar i{display:block;height:100%}
+.badge{display:inline-block;min-width:30px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:700;color:#fff}
+.P0{background:var(--p0)}.P1{background:var(--p1)}.P2{background:var(--p2)}
+.chip{display:inline-block;padding:1px 8px;border-radius:999px;background:var(--chip);font-size:12px;color:var(--muted);margin-right:4px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.tbl{overflow-x:auto}.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.f{padding:14px 0;border-bottom:1px solid var(--line)}.f:last-child{border-bottom:0}
+.ev{margin:6px 0 0;padding-left:18px;font-size:13px;color:var(--muted);word-break:break-all}
+.yes{color:var(--ok);font-weight:700}.no{color:var(--p0);font-weight:700}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.shots img{width:100%;border-radius:8px;border:1px solid var(--line)}
+.plan li{margin-bottom:10px}.top td:first-child{width:46px}
+details summary{cursor:pointer;color:var(--muted)}
+</style>
+</head>
+<body><div class="wrap">
+<h1>{{ m.site.name or m.site.url }}</h1>
+<div class="muted">{{ m.site.url }} · аудит {{ m.date }} · {{ m.pages_rendered }} стр. проверено в браузере из {{ m.urls_discovered }} найденных · {{ m.elapsed_s // 60 }} мин {{ m.elapsed_s % 60 }} с ·
+LLM: {{ m.llm.provider }}{% if m.llm.provider != 'none' %} ({{ m.llm.model }}){% endif %} · Яндекс: {{ 'позиции проверены' if stats.seo.yandex and stats.seo.yandex.status == 'ok' else 'позиции не проверены (нет ключа API)' }}</div>
+
+<h2>Итог по направлениям</h2>
+<div class="grid g5">
+{% for cat, name in cats.items() %}{% set s = scores[cat] %}
+<div class="card"><div class="muted small">{{ name }}</div><div class="score">{{ s }}<span class="muted small">/100</span></div>
+<div class="bar"><i style="width:{{ s }}%;background:{{ '#1f8a4c' if s>=75 else '#e08a00' if s>=50 else '#c62828' }}"></i></div>
+<div class="small muted" style="margin-top:6px">{{ counts[cat] }} рекомендаций</div></div>
+{% endfor %}
+</div>
+<p class="small muted">Индекс = 100 − штрафы за найденные проблемы (с учётом влияния и уверенности). Нужен для отслеживания динамики между прогонами, а не как абсолютная оценка.</p>
+
+{% if diff %}
+<h2>Изменения с прошлого прогона ({{ diff.prev_date }})</h2>
+<div class="grid g5">
+<div class="card"><div class="score" style="color:var(--ok)">{{ diff.fixed|length }}</div>исправлено</div>
+<div class="card"><div class="score" style="color:var(--p0)">{{ diff.new|length }}</div>новых проблем</div>
+<div class="card"><div class="score">{{ diff.persisting|length }}</div>осталось</div>
+</div>
+{% if diff.fixed %}<p class="small"><b>Исправлено:</b> {% for f in diff.fixed %}{{ f.title }}{{ '; ' if not loop.last }}{% endfor %}</p>{% endif %}
+{% if diff.new %}<p class="small"><b>Новое:</b> {% for f in diff.new %}{{ f.title }}{{ '; ' if not loop.last }}{% endfor %}</p>{% endif %}
+{% endif %}
+
+{% if plan and plan.plan %}
+<h2>План действий (ИИ-сводка)</h2>
+<div class="card"><p>{{ plan.summary }}</p>
+<ol class="plan">{% for p in plan.plan %}<li><b>{{ p.action }}</b><br><span class="small">{{ p.why }}</span><br>
+<span class="chip">{{ p.owner }}</span><span class="chip">{{ p.effort }}</span>{% for i in p.finding_ids %}<span class="chip">{{ i }}</span>{% endfor %}</li>{% endfor %}</ol>
+<p class="small muted">Каждый пункт плана ссылается на находки автоматических проверок (id в серых метках) — LLM не добавляет фактов от себя.</p></div>
+{% endif %}
+
+<h2>Топ-10 рекомендаций</h2>
+<div class="card tbl"><table class="top"><tr><th>Приор.</th><th>Что сделать</th><th>Направление</th><th class="num">I·E·C</th></tr>
+{% for f in top %}<tr><td><span class="badge {{ f.priority }}">{{ f.priority }}</span></td><td><b>{{ f.title }}</b><br><span class="small">{{ f.recommendation }}</span></td>
+<td class="small">{{ cats[f.category] }}</td><td class="num small">{{ f.impact }}·{{ f.ease }}·{{ '%.1f'|format(f.confidence) }} = <b>{{ f.score }}</b></td></tr>{% endfor %}
+</table></div>
+<p class="small muted">Приоритет по ICE: Impact (влияние на заявки, 1–5) × Ease (лёгкость внедрения, 1–5) × Confidence (уверенность агента, 0–1). P0 ≥ 12 — делать в первую очередь; P1 ≥ 7; P2 — бэклог.</p>
+
+{% for cat, name in cats.items() %}{% set items = by_cat[cat] %}
+<h2>{{ name }} <span class="muted small">· {{ items|length }}</span></h2>
+{% if cat == 'competitors' and comp %}
+<div class="card tbl" style="margin-bottom:12px"><table><tr><th>Возможность</th>{% for r in comp.rows %}<th>{{ 'Мы' if loop.first else r.name }}</th>{% endfor %}</tr>
+{% for key, label in comp.features %}<tr><td>{{ label }}</td>{% for r in comp.rows %}{% set v = r[key] %}
+<td>{% if key == 'lcp' %}<span class="num">{{ v if v is not none else '—' }}</span>{% elif v is none %}<span class="muted">н/д</span>{% elif v %}<span class="yes">✓</span>{% else %}<span class="no">✗</span>{% endif %}</td>{% endfor %}</tr>{% endfor %}
+</table>{% if comp.our_strengths %}<p class="small"><b>Наши преимущества</b> (нет ни у одного конкурента): {{ comp.our_strengths|join(', ') }}.</p>{% endif %}</div>
+{% endif %}
+{% if cat == 'cards' and stats.cards and stats.cards.records %}
+<div class="card tbl" style="margin-bottom:12px"><table><tr><th>Авто</th><th class="num">Цена</th><th class="num">Фото</th><th>Наличие</th><th class="num">Характ.</th><th>Кнопка</th><th class="num">Полнота</th></tr>
+{% for r in stats.cards.records %}<tr><td class="small"><a href="{{ r.url }}">{{ r.title }}</a></td><td class="num">{{ '{:,}'.format(r.price).replace(',', ' ') ~ ' ₽' if r.price else '—' }}</td><td class="num">{{ r.photos }}</td>
+<td class="small">{{ 'в наличии' if r.in_stock else 'в пути' if r.in_transit else 'под заказ' if r.on_order else '—' }}</td><td class="num">{{ r.specs }}</td><td>{{ '✓' if r.cta else '✗' }}</td><td class="num"><b>{{ r.completeness }}%</b></td></tr>{% endfor %}
+</table><p class="small muted">Выборка: {{ stats.cards.cards_analyzed }} карточек; средняя полнота {{ stats.cards.avg_completeness }}%. Полнота = фото ≥5, цена, ≥3 характеристики, статус наличия, год, кнопка заявки.</p></div>
+{% endif %}
+{% if cat == 'technical' and perf %}
+<div class="card tbl" style="margin-bottom:12px"><table><tr><th>Страница (mobile, Slow 4G, CPU×4)</th><th class="num">TTFB</th><th class="num">FCP</th><th class="num">LCP</th><th class="num">CLS</th><th class="num">Вес</th><th class="num">Запросов</th></tr>
+{% for x in perf %}<tr><td class="small">{{ x.url }}</td>{% if x.error %}<td colspan="6" class="small">{{ x.error }}</td>{% else %}<td class="num">{{ x.ttfb }} с</td><td class="num">{{ x.fcp }} с</td><td class="num"><b>{{ x.lcp }} с</b></td><td class="num">{{ x.cls }}</td><td class="num">{{ x.weight_mb }} МБ</td><td class="num">{{ x.requests }}</td>{% endif %}</tr>{% endfor %}
+</table><p class="small muted">Лабораторный замер в headless Chromium (аналог Lighthouse mobile). Нормы Google/Яндекса: LCP ≤ 2,5 с, CLS ≤ 0,1.</p></div>
+{% endif %}
+{% if cat == 'seo' and stats.seo and stats.seo.yandex and stats.seo.yandex.status == 'ok' %}
+<div class="card tbl" style="margin-bottom:12px"><table><tr><th>Запрос (регион {{ stats.seo.yandex.region }})</th><th>Мы</th>{% for h in (stats.seo.yandex.queries[0].competitors.keys() if stats.seo.yandex.queries else []) %}<th>{{ h }}</th>{% endfor %}</tr>
+{% for q in stats.seo.yandex.queries %}<tr><td>{{ q.query }}</td><td class="num"><b>{{ q.position or '—' }}</b></td>{% for h, v in q.competitors.items() %}<td class="num">{{ v or '—' }}</td>{% endfor %}</tr>{% endfor %}</table></div>
+{% elif cat == 'seo' %}<p class="small muted">Позиции в Яндексе не проверялись: задайте YANDEX_SEARCH_API_KEY и YANDEX_FOLDER_ID (Yandex Cloud Search API) — агент добавит таблицу позиций по целевым запросам для сайта и конкурентов.</p>{% endif %}
+<div class="card">{% for f in items %}<div class="f"><h3><span class="badge {{ f.priority }}">{{ f.priority }}</span> {{ f.title }}</h3>
+<div>{{ f.recommendation }}</div>
+<div class="small muted" style="margin-top:4px"><span class="chip">влияние {{ f.impact }}/5</span><span class="chip">лёгкость {{ f.ease }}/5</span><span class="chip">уверенность {{ '%.0f'|format(f.confidence*100) }}%</span><span class="chip">{{ {'rule':'автопроверка','llm':'ИИ-разбор','competitor':'сравнение'}[f.source] }}</span><span class="chip">{{ f.id }}</span></div>
+{% if f.evidence %}<ul class="ev">{% for e in f.evidence %}<li>{% if e.startswith('http') %}<a href="{{ e }}">{{ e }}</a>{% elif e.startswith('shots/') %}<a href="{{ e }}">скриншот: {{ e }}</a>{% else %}{{ e }}{% endif %}</li>{% endfor %}</ul>{% endif %}
+</div>{% else %}<p class="muted">Проблем не найдено.</p>{% endfor %}</div>
+{% endfor %}
+
+<h2>Скриншоты</h2>
+<div class="shots">{% for p in pages %}{% for mode, path in p.screenshots.items() %}{% if path %}<a href="{{ path }}"><img src="{{ path }}" loading="lazy" alt="{{ p.kind }} {{ mode }}"><div class="small muted">{{ p.kind }} · {{ mode }}</div></a>{% endif %}{% endfor %}{% endfor %}</div>
+
+<h2>Проверенные страницы</h2>
+<details><summary>{{ pages|length }} страниц</summary><div class="tbl"><table><tr><th>Тип</th><th>Код</th><th>URL</th></tr>
+{% for p in pages %}<tr><td class="small">{{ p.kind }}</td><td class="num">{{ p.status }}</td><td class="small"><a href="{{ p.url }}">{{ p.url }}</a></td></tr>{% endfor %}</table></div></details>
+
+<p class="small muted" style="margin-top:32px">Сгенерировано агентом dealer-site-audit v{{ m.version }}. Агент собирает факты автоматически (браузер Chromium, HTTP-проверки, sitemap), правила дают находки с доказательствами, LLM (если подключён) разбирает скриншоты и сводит находки в план. Ограничения: формы не отправляются без флага --test-forms; поведение посетителей (Метрика, CRM) агенту недоступно — после подключения выгрузок приоритеты можно калибровать по реальной конверсии.</p>
+</div></body></html>
